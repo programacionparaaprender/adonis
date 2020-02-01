@@ -1,0 +1,24 @@
+https://adonisjs.com/docs/4.1/installation
+https://adonisjs.com/docs/4.1/database-hooks
+https://adonisjs.com/docs/3.2/database-setup
+
+https://www.udemy.com/course/curso-crea-una-rest-api-desde-cero-con-nodejs-y-adonisjs/learn/lecture/15981280#overview
+
+adonis new adonis-rest-api --api-only
+
+mejor usar git clone para que funcione
+
+adonis serve --dev
+
+adonis make:controller User
+
+adonis make:controller Ejemplo --resource
+//aun no me funciona
+npm install --save mssql
+
+//si funciona
+npm install --save sqlite3
+
+adonis migration:run
+
+adonis serve --dev
