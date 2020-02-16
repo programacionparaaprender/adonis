@@ -1,6 +1,17 @@
 https://adonisjs.com/docs/4.1/installation
 https://adonisjs.com/docs/4.1/database-hooks
 https://adonisjs.com/docs/3.2/database-setup
+https://adonisjs.com/docs/4.1/migrations
+https://adonisjs.com/docs/4.1/authentication
+https://adonisjs.com/docs/4.1/relationships
+https://adonisjs.com/docs/4.1/query-builder#_introduction
+https://forum.adonisjs.com/t/stored-procedure/601/3
+https://adonisjs.com/docs/4.1/lucid
+adonis install @adonisjs/auth
+https://dev.to/nilomiranda/creating-an-api-using-adonisjs-part-1-2mk0
+generar una vez para que funcione el jwt
+adonis key:generate
+https://jwt.io/
 
 https://www.udemy.com/course/curso-crea-una-rest-api-desde-cero-con-nodejs-y-adonisjs/learn/lecture/15981280#overview
 
@@ -13,8 +24,10 @@ adonis serve --dev
 adonis make:controller User
 
 adonis make:controller Ejemplo --resource
-//aun no me funciona
-npm install --save mssql
+//ya me funciona
+https://forum.adonisjs.com/t/sql-server-create-connection/3971/4
+npm i mssql@4.1.0
+
 
 //si funciona
 npm install --save sqlite3
@@ -22,3 +35,16 @@ npm install --save sqlite3
 adonis migration:run
 
 adonis serve --dev
+
+--m hace que se cree la migración
+adonis make:model Proyecto -m
+
+https://adonisjs.com/docs/4.1/relationships
+proyectos () {
+    return this.hasMany('App/Models/Proyecto')
+  }
+
+  adonis migration:run
+  adonis migration:refresh
+
+  adonis make:controller Proyecto
