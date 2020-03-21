@@ -48,3 +48,22 @@ proyectos () {
   adonis migration:refresh
 
   adonis make:controller Proyecto
+
+  --------------
+  creando servicios
+-----------------
+
+
+----------
+Creando excepciones
+-----------------
+adonis make:exception AccesoProhibido
+adonis make:exception RecursoNoEncontrado
+
+-------------
+Creando el modelo tareas
+-------------------------
+adonis make:model Tarea -m
+adonis migration:run
+adonis make:controller Tarea
+adonis migration:rollback
