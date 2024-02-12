@@ -67,7 +67,30 @@
 >- adonis make:controller Ejemplo --resource (seleccionamos http)
 
 ### 9. Creando usuarios
-
+>- npm install sqlite3 --save
+>- adonis migration:run
+>- adonis migration:refresh
 
 ### 10. Login de Usuarios y JWT
+
+### 11. Creando el modelo Proyecto
+>- adonis make:model Proyecto -m
+>- adonis make:model Tarea -m
+>- adonis migration:run
+>- adonis migration:refresh
+
+
+### 12. Método Index
+>- adonis make:controller Proyecto --resource (seleccionamos http)
+>- https://legacy.adonisjs.com/docs/6.1.3/
+>- https://docs.adonisjs.com/guides/sql
+>- adonis make:model TarjetaCredito -m
+>- adonis make:model Menu -m
+>- adonis make:model Autor -m
+>- adonis make:model Noticia -m
+>- adonis migration:run
+>- adonis migration:refresh
+>- adonis make:controller Menu (seleccionamos http)
+>- adonis make:controller Autor (seleccionamos http)
+>- adonis make:controller Noticia (seleccionamos http)
 

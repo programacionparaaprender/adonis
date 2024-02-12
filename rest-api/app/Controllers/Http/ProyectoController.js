@@ -6,7 +6,7 @@
 const Proyecto = use('App/Models/Proyecto');
 const User = use('App/Models/User')
 const Database = use('Database')
-
+const AutorizacionService = use('App/Services/AutorizacionService')
 /**
  * Resourceful controller for interacting with proyectos
  */
@@ -32,6 +32,20 @@ class ProyectoController {
 
   }
 
+  async destroy({ auth, request, response, params}){
+    const user = await auth.getUser();
+    const { id } = params;
+    const proyecto = await Proyecto.find(id);
+    AutorizacionService.verificarPermiso(proyecto, user);
+    /* if(proyecto.user_id !== user.id){
+        return response.status(403).json({
+            mensaje: "No puedes eliminar un proyecto del cual no eres dueño"
+        });
+    } */
+    proyecto.delete();
+    return proyecto;
+}
+
   async createMultiple({ auth, request}){
     const user = await auth.getUser();
     const { user_id, nombre } = request.all();
@@ -50,6 +64,7 @@ class ProyectoController {
     return proyecto;
 
 }
+
 
 }
 
