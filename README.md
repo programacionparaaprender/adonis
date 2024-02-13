@@ -94,3 +94,17 @@
 >- adonis make:controller Autor (seleccionamos http)
 >- adonis make:controller Noticia (seleccionamos http)
 
+### 13. Método Create
+
+### 14. Método Destroy
+
+### 15. Servicios y Excepciones
+>- adonis make:exception AccesoProhibido
+>- adonis make:exception RecursoNoEncontrado
+
+### 16. Método Update
+
+## Sección 6: Creando tareas
+
+### 17. Creando el modelo Tareas
+>- adonis make:controller Tarea (seleccionamos http)
