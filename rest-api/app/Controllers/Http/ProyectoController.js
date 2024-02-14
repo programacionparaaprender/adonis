@@ -42,7 +42,7 @@ class ProyectoController {
             mensaje: "No puedes eliminar un proyecto del cual no eres dueño"
         });
     } */
-    proyecto.delete();
+    await proyecto.delete();
     return proyecto;
 }
 

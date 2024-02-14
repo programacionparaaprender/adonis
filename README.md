@@ -45,7 +45,7 @@
 >- nvm ls
 >- nvm use 12.22.12
 >- nvm list
-
+>- nvm use 18.10.0
 
 ### 6. Instalando AdonisJS
 >- https://docs.adonisjs.com/guides/installation
@@ -108,3 +108,30 @@
 
 ### 17. Creando el modelo Tareas
 >- adonis make:controller Tarea (seleccionamos http)
+
+### 18. Método Create para nuestras tareas
+>- adonis migration:rollback
+>- adonis migration:run
+>- adonis migration:refresh
+
+### 19. Listamos todas nuestras tareas
+
+### 20. Clase Final, Actualizar y Eliminar tareas
+
+## Sección 7: Despedida
+
+### 21. Que hacer luego de tener nuestra REST API Finalizada
+
+### 22. Gracias, continua aprendiendo pero empieza a crear YA!
+>- adonis make:model TarjetaCredito -m
+>- adonis make:controller TarjetaCredito (seleccionamos http)
+>- adonis migration:run
+>- adonis migration:refresh
+
+### obtener un solo registro
+>- https://stackoverflow.com/questions/44185803/adonis-js-search-queries
+>- https://legacy.adonisjs.com/docs/4.0/query-builder#_selects
+
+### configurar cors
+>- https://docs.adonisjs.com/guides/cors
+

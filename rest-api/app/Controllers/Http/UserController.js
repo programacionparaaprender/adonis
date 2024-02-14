@@ -4,6 +4,28 @@ const User = use('App/Models/User');
 const Database = use('Database')
 
 class UserController {
+    async token({ request, auth }) {
+        const { username, email, password } = request.all();
+        const token = await auth.attempt(email, password);
+        //const users = await User.query().where('username', '=', username).fetch();
+        const user = await Database.table('users').where('users.username', username).first();//limit(1);
+   
+        //await auth.attempt(uid, password)
+        return {
+            //type: token.type,
+            //token: token.token,
+            //refreshToken: token.refreshToken,
+            //status: 200,
+            //mensaje: "Token obtenido",
+            id: user.id,
+            token: token.token,
+            nombre: username,
+            email: email,
+            role: "",
+            status: 200
+        };
+    }
+    
     async login({ request, auth }) {
         const { username, email, password } = request.all();
         const token = await auth.attempt(email, password);
