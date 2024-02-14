@@ -134,4 +134,7 @@
 
 ### configurar cors
 >- https://docs.adonisjs.com/guides/cors
+>- https://adonisjs.com/docs/4.1/cors
+>- adonis install @adonisjs/cors
+>- file:///C:/Users/luis1/AppData/Local/Temp/1707920138704.html
 

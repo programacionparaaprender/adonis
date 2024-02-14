@@ -4,6 +4,14 @@ const User = use('App/Models/User');
 const Database = use('Database')
 
 class UserController {
+    async index ({ request, response }) {
+        const users = await User.all();
+        return{
+            status: 200,
+            data:users,
+            mensaje: 'Obtenemos usuarios'
+        } 
+  }
     async token({ request, auth }) {
         const { username, email, password } = request.all();
         const token = await auth.attempt(email, password);

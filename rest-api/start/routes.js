@@ -22,6 +22,7 @@ Route.get('/', () => {
 
 
 Route.group(() => {
+  Route.post('usuarios/','UserController.index').middleware('auth');
   Route.post('usuarios/registro','UserController.registro');
   Route.post('usuarios/store','UserController.store');
   Route.post('usuarios/login', 'UserController.login');
